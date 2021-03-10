@@ -1,4 +1,9 @@
 {
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true
@@ -24,6 +29,11 @@
         "@typescript-eslint/no-use-before-define": ["error"], //https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined/64024916#64024916
         "no-use-before-define": "off",
         "react/jsx-filename-extension": "off", 
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "jsx-a11y/anchor-is-valid": [ "error", {
+            "components": [ "Link" ],
+            "specialLink": [ "hrefLeft", "hrefRight" ],
+            "aspects": [ "invalidHref", "preferButton" ]
+        }]
     }
 }

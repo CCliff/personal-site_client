@@ -1,14 +1,14 @@
 import { ReactElement } from 'react';
 
-import Layout from '@/global/layout/Layout';
+import Default from '@/global/layout/default/Default';
 import Head from 'next/head';
 
 export default function Home(): ReactElement {
   return (
-    <Layout>
+    <Default>
       <Head>
         <title>Testing</title>
       </Head>
-    </Layout>
+    </Default>
   );
 }
