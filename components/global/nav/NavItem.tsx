@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import Link from 'next/link';
+
 import styles from './NavItem.module.scss';
 
 interface NavItem {
@@ -7,10 +8,15 @@ interface NavItem {
   text: string;
 }
 
-export default function NavItem({href, text } : NavItem): ReactElement {
+export default function NavItem({
+  href,
+  text,
+}: NavItem): ReactElement {
   return (
-    <Link href={href}>
-      <a>{text}</a>
-    </Link>
+    <div className={styles.container}>
+      <Link href={href}>
+        <a className={styles.link}>{text}</a>
+      </Link>
+    </div>
   );
 }
